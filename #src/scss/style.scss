@@ -1,0 +1,104 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "fonts";
+
+@import "reset";
+
+// Fonts 
+$exo2: 'Exo2';
+$nunito: 'Nunito';
+$nunitoSans: 'NunitoSans';
+$roboto: 'Roboto';
+
+body {
+  font-family: $nunitoSans;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 19px;
+}
+
+// Colors
+
+$blue: #2F97EB;
+$blueShadow: 0px 20px 20px rgba(69, 139, 245, 0.3);
+$green: #95CF62;
+$greenShadow: 0px 20px 20px rgba(133, 207, 98, 0.3);
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1538px;
+  margin: 0 auto;
+}
+
+// Button
+button {
+  padding: 15px 30px;
+  font-family: $exo2;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 10px;
+
+  &.green {
+    background-color: $green;
+    box-shadow: $greenShadow;
+  }
+  &.blue {
+    background-color: $blue;
+    box-shadow: $blueShadow;
+  }
+
+  &:hover {
+
+  }
+}
+
+// Title
+.title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  font-family: $exo2;
+  text-transform: uppercase;
+  text-align: center;
+  color: $blue;
+
+  span {
+    color: $green;
+  }
+}
+
+// Auxiliary classes
+.w-640{
+  width: 640px;
+}
+.my-75 {
+  margin: 75px 0;
+}
+.mt-60 {
+  margin-top: 60px !important;
+}
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+.text-left {
+  text-align: left
+}
+
+@import 'header';
+@import 'main_index';
+@import 'footer';

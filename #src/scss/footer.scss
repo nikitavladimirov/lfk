@@ -1,0 +1,31 @@
+footer {
+  background-color: #F3F3F3;
+}
+
+.footer-wrapper {
+  padding: 50px 0 40px;
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  
+  &__section > ul li:last-of-type{
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    margin-bottom: 20px;
+  }
+
+  &__number {
+    font-family: $exo2;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+}

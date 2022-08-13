@@ -1,0 +1,32 @@
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 27px;  
+  position: relative;
+  z-index: 100;
+  &__section {
+    &_1 {
+      width: 100%;
+      max-width: 970px;
+    }
+    &_2 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__menu {
+    ul {
+      display: flex;
+      margin-left: 40px;
+      li {
+        margin-right: 64px;
+      }
+      li:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
