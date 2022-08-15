@@ -19,25 +19,33 @@ $nunito: 'Nunito';
 $nunitoSans: 'NunitoSans';
 $roboto: 'Roboto';
 
+// Colors
+
+$darkText: #444444;
+$blue: #2F97EB;
+$blueShadow: 0px 20px 20px rgba(69, 139, 245, 0.3);
+$green: #95CF62;
+$greenShadow: 0px 10px 25px rgba(133, 207, 98, 0.3);
+
 body {
   font-family: $nunitoSans;
   font-weight: 400;
   font-size: 24px;
   line-height: 19px;
+  color: $darkText;
 }
 
-// Colors
 
-$blue: #2F97EB;
-$blueShadow: 0px 20px 20px rgba(69, 139, 245, 0.3);
-$green: #95CF62;
-$greenShadow: 0px 20px 20px rgba(133, 207, 98, 0.3);
 
 // Container
 .container {
   width: 100%;
   max-width: 1538px;
   margin: 0 auto;
+
+  @media (max-width: 1600px) {
+    padding: 0 20px;
+  }
 }
 
 // Button
