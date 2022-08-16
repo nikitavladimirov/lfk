@@ -88,12 +88,14 @@ button {
   span {
     color: $green;
   }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 // Auxiliary classes
-.w-640{
-  width: 640px;
-}
 .my-75 {
   margin: 75px 0;
 }

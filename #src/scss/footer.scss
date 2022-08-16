@@ -6,12 +6,20 @@ footer {
 .footer-wrapper {
   padding: 50px 0 40px;
   display: flex;
-  flex: 0 1 auto;
   align-items: center;
   justify-content: space-between;
   
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+
   &__section > ul li:last-of-type{
     margin-bottom: 0;
+    flex: 0 1 25%;
+
+    @media (max-width: 768px)  {
+      flex: 0 1 50%;
+    }
   }
 
   &__logo {

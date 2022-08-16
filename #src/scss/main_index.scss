@@ -19,6 +19,10 @@
     max-width: 780px;
     height: 100%;
     position: relative;
+
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
   }
 
   .main-block-image-card {
@@ -33,6 +37,11 @@
     transform: rotate(15deg);
     border: 5px solid white;
     box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 1024px) {
+      position: static;
+    }
+
     img {
       width: 368px;
       height: 314px;
@@ -60,7 +69,11 @@
     width: 377px;
     border-radius: 20px;
     border: 3px dotted $green;
-    padding: 22px 
+    padding: 22px;
+
+    @media (max-width: 1024px) {
+      position: static;
+    }
   }
 }
 
@@ -69,6 +82,11 @@
     display: flex;
     max-width: 502px;
     margin-top: 50px;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
   }
 
   &__text {
@@ -80,11 +98,26 @@
 
 .grid {
   display: flex;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
 }
 
 .grid-item {
   flex: 0 1 25%;
   padding-right: 20px;
+
+  @media (max-width: 1024px) {
+    flex: 0 1 50%;
+    &:nth-child(2n-1) {
+      padding-right: 10px;
+    }
+    &:nth-child(2n) {
+      padding-right: 0px;
+      padding-left: 10px;
+    }
+  }
 
   &__image {
     position: relative;
@@ -103,6 +136,10 @@
       top: 0;
       left: 0;
       transition: ease-in-out .3s;
+    }
+
+    @media (max-width: 768px) {
+      height: 181px;
     }
   }
 
@@ -123,6 +160,11 @@
     font-weight: 400;
     font-family: $nunito;
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 
 }
@@ -134,14 +176,33 @@
   padding: 80px;
   box-shadow: $greenShadow;
 
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
   .steps {
     display: flex;
+
+    margin-top: 80px;
+
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
 
     &__item {
       flex: 0 1 33.333%;
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media (max-width: 1024px) {
+        flex: 0 1 100%;
+        margin-bottom: 60px;
+        &:last-child {
+          margin-bottom: 30px;
+        }
+      }
     }
 
     &__image {
@@ -152,9 +213,15 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      margin-bottom: 25px;
 
       background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='90' ry='90' stroke='white' stroke-width='9' stroke-dasharray='8%2c 24' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
       border-radius: 90px;
+
+      @media (max-width: 768px) {
+        width: 245px;
+        height: 210px;
+      }
 
       &::before {
         position: absolute;
@@ -209,6 +276,11 @@
       text-align: center;
       font-size: 30px;
       line-height: 42px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 25px;
+      }
     }
   }
 
@@ -221,6 +293,11 @@
     text-align: center;
     span {
       color: $green;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+      line-height: 29px;
     }
   } 
 }
@@ -238,6 +315,11 @@
   &__panel {
     padding: 36px 0px;
     border-top: 1px solid #D6D6D6;
+
+    @media (max-width: 768px) {
+      padding: 22px 0px;
+    }
+
     &:last-of-type {
       border-bottom: 1px solid #D6D6D6;
     }
@@ -251,6 +333,11 @@
     font-weight: 700;
     font-family: $roboto;
     cursor: pointer;
+        
+    @media (max-width: 768px) {
+      font-size: 22px;
+      line-height: 31px;
+    }
 
     img {
       margin-right: 19px;
@@ -271,5 +358,10 @@
     height: 0;
     overflow: hidden;
     transition: height 0.2s ease-out;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }
