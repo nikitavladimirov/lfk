@@ -80,4 +80,19 @@ footer {
       margin-bottom: 12px;
     }
   }
+
+  &__socials {
+    a {
+      margin-right: 20px;
+    }
+    @media (max-width: 1024px) {
+      a {
+        margin-right: 10px;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
 }
