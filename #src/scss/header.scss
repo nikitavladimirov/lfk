@@ -8,12 +8,31 @@
     &_1 {
       width: 100%;
       max-width: 970px;
+
+      @media (max-width: 1024px) {
+        flex: 0 1 25%;
+        .logo {
+          width: 90px;
+          height: 25px;
+        }        
+      }
     }
     &_2 {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      & button {
+        width: 200px;
+        font-size: 12px;
+        line-height: 30px;
+        padding: 15px;
+      }
+
+      @media (max-width: 1024px) {
+        justify-content: flex-end;
+      }
     }
   }
 
@@ -27,6 +46,10 @@
       li:last-of-type {
         margin-right: 0;
       }
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
     }
   }
 }

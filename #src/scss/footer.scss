@@ -11,23 +11,61 @@ footer {
   
   @media (max-width: 1024px) {
     flex-wrap: wrap;
+    padding: 26px 0 33px;
+  }
+
+  &__section {
+    flex: 0 1 25%;
+
+    @media (max-width: 768px) {
+      flex: 0 1 50%;
+      .year {
+        font-size: 14px;
+      }
+      &.section_1 {
+        order: 1
+      }
+      &.section_2 {
+        order: 3;
+        margin-top: 37px;
+      }
+      &.section_3 {
+        order: 4;
+        margin-top: 37px;
+      }
+      &.section_4 {
+        order: 2
+      }
+    }
   }
 
   &__section > ul li:last-of-type{
     margin-bottom: 0;
-    flex: 0 1 25%;
-
-    @media (max-width: 768px)  {
-      flex: 0 1 50%;
-    }
   }
 
   &__logo {
     margin-bottom: 25px;
+
+    @media (max-width: 768px) {
+      width: 94px;
+      height: 25px;
+      margin-bottom: 8px;
+    }
   }
 
   &__link {
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+
+    a {
+      @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
   }
 
   &__number {
@@ -36,5 +74,25 @@ footer {
     font-size: 32px;
     line-height: 22px;
     margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__socials {
+    a {
+      margin-right: 20px;
+    }
+    @media (max-width: 1024px) {
+      a {
+        margin-right: 10px;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
   }
 }
