@@ -9,12 +9,38 @@
     <title>LFK</title>
 </head>
 <body>
-    <header>
+    <div class="form-modal" id="form-modal">
+  <div class="form-modal__content">
+    <img src="img/icons/close.svg" id="close-modal-btn" class="close" alt="close">
+    <div class="title">
+      Оставьте ваши контакты
+      и мы вам перезвоним
+      <span>в течение 5 минут</span>
+    </div>
+    <form class="form">
+      <label for="name" class="label">Имя</label>
+      <input class="input" type="text" name="name" value="" id="name" placeholder="Петр Иванов">
+      <label for="tel" class="label">Телефон</label>
+      <input
+        class="input"
+        type="tel" id="tel" placeholder="+7 (495) 212-08-81"
+        name="telephone"
+        value=""
+      >
+      <input class="submit" type="submit" id="submit-btn" value="Приступить к занятиям"/>
+      <div class="personal-terms">
+        <input type="checkbox" name="personal-terms" value="personal-terms" id="personal-terms">
+        <label for="personal-terms">Я согласен с <a href="#">условиями обработки персональных данных</a></label>
+      </div>
+    </form>
+  </div>
+</div>
+<header>
   <div class="container">
     <div class="header-wrapper">
       <div class="header-wrapper__section_1">
         <a href="#">
-          <img src="img/logo-header.svg" alt="Логотип">
+          <img class="logo" src="img/logo-header.svg" alt="Логотип">
         </a>
       </div>
       <div class="header-wrapper__section_2">
@@ -24,7 +50,7 @@
             <li><a href="#">Инструкторам</a></li>
           </ul>
         </div>
-        <button class="green">
+        <button class="green" id="consultation-btn">
           Получить консультацию
         </button>
       </div>
@@ -32,7 +58,11 @@
   </div>
 </header>
     <section class="main-block">
-  <img class="main-block__image" src="img/background.png" alt="бэкграунд">
+  <div class="main-block__background">
+    <img class="main-block__lining" src="img/main-block/lining.png" alt="lining">
+    <img class="main-block__texture" src="img/main-block/texture.png" alt="texture">
+    <img class="main-block__girl" src="img/main-block/girl.jpg" alt="girl">
+  </div>
   <div class="container">
     <div class="main-block__left">
       <div class="title text-left">
@@ -40,19 +70,25 @@
       </div>
       <ul class="reability-list">
         <li class="reability-list__item">
-          <img src="img/icons/reability-icon1.svg" alt="icon">
+          <div class="reability-list__icon">
+            <img src="img/icons/reability-icon1.svg" alt="icon">
+          </div>
           <div class="reability-list__text">
             Полноценная реабилитация в комфортных домашних условиях
           </div>
         </li>
         <li class="reability-list__item">
-          <img src="img/icons/reability-icon2.svg" alt="icon">
+          <div class="reability-list__icon">
+            <img src="img/icons/reability-icon2.svg" alt="icon">
+          </div>
           <div class="reability-list__text">
             Для маломобильных пациентов после травм, операций, инфарктов, инсультов
           </div>
         </li>
         <li class="reability-list__item">
-          <img src="img/icons/reability-icon3.svg" alt="icon">
+          <div class="reability-list__icon">
+            <img src="img/icons/reability-icon3.svg" alt="icon">
+          </div>
           <div class="reability-list__text">
             Под руководством квалифицированного инструктора
           </div>
@@ -217,7 +253,7 @@
     <footer>
   <div class="container">
     <div class="footer-wrapper">
-      <div class="footer-wrapper__section footer-wrapper__section_1">
+      <div class="footer-wrapper__section section_1">
         <a href="#">
           <img
             src="img/logo-footer.svg"
@@ -225,28 +261,29 @@
             class="footer-wrapper__logo"
           >
         </a>
-        <div>© 2022</div>
+        <div class="year">© 2022</div>
       </div>
-      <div class="footer-wrapper__section footer-wrapper__section_2">
+      <div class="footer-wrapper__section section_2">
         <ul>
           <li class="footer-wrapper__link"><a href="#">Акции</a></li>
           <li class="footer-wrapper__link"><a href="#">Блог</a></li>
           <li class="footer-wrapper__link"><a href="#">Наши специалисты</a></li>
         </ul>
       </div>
-      <div class="footer-wrapper__section footer-wrapper__section_3">
+      <div class="footer-wrapper__section section_3">
         <ul>
           <li class="footer-wrapper__link"><a href="#">Договор оферты</a></li>
           <li class="footer-wrapper__link"><a href="#">Инструкторам</a></li>
           <li class="footer-wrapper__link"><a href="#">Лицензия</a></li>
         </ul>
       </div>
-      <div class="footer-wrapper__section footer-wrapper__section_4">
+      <div class="footer-wrapper__section section_4">
         <div class="footer-wrapper__number">
           +7 (495) 212-08-81
         </div>
         <div class="footer-wrapper__socials">
-          socials links
+          <a href="#"><img src="img/icons/icon-whatsapp.svg" alt=""></a>
+          <a href="#"><img src="img/icons/icon-telegram.svg" alt=""></a>
         </div>
       </div>
     </div>
