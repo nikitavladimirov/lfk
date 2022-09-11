@@ -68,6 +68,11 @@
         padding: 38px 32px;
         margin-bottom: 30px;
 
+        &.error {
+          border-color: red;
+          box-shadow: 0 0 6px red;
+        }
+
         &::placeholder {
           color: #BEBEBE;
         }
@@ -91,13 +96,21 @@
 
       .personal-terms {
         display: flex;
+
         input {
           margin-right: 13px;
           width: 21px;
           height: 21px;
           border-radius: 5px;
           border: 1px solid #A4A4A4;
+          flex-shrink: 0;
+
+          &.error {
+            border-color: red;
+            box-shadow: 0 0 6px red;
+          }
         }
+
         label {
           font-family: $inter;
           font-size: 18px;
