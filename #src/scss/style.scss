@@ -19,6 +19,7 @@ $nunito: 'Nunito';
 $nunitoSans: 'NunitoSans';
 $roboto: 'Roboto';
 $inter: 'Inter';
+$ruda: 'Ruda';
 
 // Colors
 
@@ -41,7 +42,7 @@ body {
 // Container
 .container {
   width: 100%;
-  max-width: 1538px;
+  max-width: 1540px;
   margin: 0 auto;
 
   @media (max-width: 1600px) {
@@ -109,8 +110,18 @@ button {
 .text-left {
   text-align: left
 }
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center
+}
+.align-center {
+  align-items: center
+}
 
 @import 'header';
 @import 'main_index';
 @import 'form';
+@import 'lp';
 @import 'footer';

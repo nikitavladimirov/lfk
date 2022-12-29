@@ -1,0 +1,105 @@
+.steps-lp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 65px;
+  .item {
+    width: 25%;
+    padding: 0 50px;
+    margin-bottom: 35px;
+    &__image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: $green;
+      margin: auto;
+      margin-bottom: 27px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23FFFFFF' stroke-width='7' stroke-dasharray='12%25%2c 9%25' stroke-dashoffset='75' stroke-linecap='round'/%3e%3c/svg%3e");
+
+      img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    &__title {
+      font-weight: 800;
+      font-family: $nunitoSans;
+      font-size: 30px;
+      line-height: 33px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+    }
+
+    @media (max-width: 1365px) {
+      padding: 0 25px;
+    }
+    @media (max-width: 1023px) {
+      width: 50%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.img-doctor-man {
+  width: 557px;
+  height: 550px;
+  border-radius: 40px;
+  object-fit: cover;
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.white-dashed-block {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  flex: 0 1 50%;
+  left: -100px;
+  transform: skewX(-5deg);
+  padding: 40px;
+  border-radius: 30px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%2395CF62' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  p {
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 40px;
+    transform: skewX(5deg);
+    @media (max-width: 1023px) {
+      max-width: unset;
+      width: 100%;
+      transform: skewX(0deg);
+    }
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  @media (max-width: 1023px) {
+    border-radius: 0;
+    left: 0;
+    margin: 0px;
+    width: calc(100% + 50px);
+    flex: 0 1 100%;
+    transform: skewX(0deg);
+  }
+}
