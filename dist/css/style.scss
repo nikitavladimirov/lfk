@@ -71,6 +71,14 @@ button {
     background-color: $blue;
     box-shadow: $blueShadow;
   }
+  &.btn-lp {
+    font-family: $ruda;
+    display: flex;
+    align-items: center;
+  }
+  &.h-50 {
+    max-height: 50px;
+  }
 
   &:hover {
 
@@ -118,6 +126,12 @@ button {
 }
 .align-center {
   align-items: center
+}
+.w-600 {
+  font-weight: 600;
+}
+.w-800 {
+  font-weight: 800;
 }
 
 @import 'header';
