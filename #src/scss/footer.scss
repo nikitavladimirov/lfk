@@ -1,6 +1,10 @@
 footer {
   margin-top: 200px;
   background-color: #F3F3F3;
+
+  @media (max-width: 767px) {
+    margin-top: 70px;
+  }
 }
 
 .footer-wrapper {

@@ -17,6 +17,7 @@
 $exo2: 'Exo2';
 $nunito: 'Nunito';
 $nunitoSans: 'NunitoSans';
+$nunitoSansItalic: 'NunitoSansItalic';
 $roboto: 'Roboto';
 $inter: 'Inter';
 $ruda: 'Ruda';
@@ -117,15 +118,6 @@ button {
 }
 .text-left {
   text-align: left
-}
-.flex {
-  display: flex;
-}
-.justify-center {
-  justify-content: center
-}
-.align-center {
-  align-items: center
 }
 .w-600 {
   font-weight: 600;
