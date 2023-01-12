@@ -9,7 +9,13 @@
   <title>Document</title>
 </head>
 <body>
-  @@include('pages/lp/_header-lp.html')
+  <section class="top-header-section">
+    @@include('_form.html')
+    <div class="container">
+      @@include('pages/lp/_header-lp.html')
+      @@include('pages/lp/_top-lp.html')
+    </div>
+  </section>
   @@include('pages/lp/_main.html')
   @@include('pages/lp/_footer-lp.html')
 </body>
