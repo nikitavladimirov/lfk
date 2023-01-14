@@ -261,6 +261,15 @@ button.h-50 {
   color: #95CF62;
 }
 
+.title.title-lp {
+  font-family: "Ruda";
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 57px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .my-75 {
   margin: 75px 0;
 }
@@ -1295,6 +1304,10 @@ button.h-50 {
   margin-right: 40px;
 }
 
+.methods-section .important-block > div:first-of-type .title {
+  margin-bottom: 60px;
+}
+
 .methods-section .important-block > div:last-of-type {
   position: relative;
 }
@@ -1390,6 +1403,110 @@ button.h-50 {
 }
 
 .methods-section .important-block .important-block-grid .item__text {
+  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.methods-section .profitable-treatment-block {
+  position: relative;
+}
+
+.methods-section .profitable-treatment-block .blue-background-block {
+  background: url("../img/textures/Rectangle 240.png"), #ECF7FE;
+  padding: 70px 38px 125px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  max-width: 1280px;
+  left: 260px;
+  border-radius: 30px;
+  border: 6px solid white;
+  -webkit-box-shadow: 0px 137px 68px -130px rgba(11, 27, 38, 0.15);
+          box-shadow: 0px 137px 68px -130px rgba(11, 27, 38, 0.15);
+}
+
+.methods-section .profitable-treatment-block .blue-background-block__text {
+  position: relative;
+  width: 100%;
+  left: calc(100% - 560px);
+  max-width: 560px;
+}
+
+.methods-section .profitable-treatment-block .blue-background-block__text p {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.methods-section .profitable-treatment-block .blue-background-block__text p:first-of-type {
+  margin-bottom: 25px;
+}
+
+.methods-section .profitable-treatment-block .blue-background-block__text p:last-of-type {
+  margin-bottom: 40px;
+}
+
+.methods-section .profitable-treatment-block > div:last-of-type {
+  background-color: white;
+  position: absolute;
+  top: calc(50% - 106px);
+  width: 100%;
+  max-width: 895px;
+  -webkit-transform: skew(-5deg);
+      -ms-transform: skew(-5deg);
+          transform: skew(-5deg);
+  border-radius: 30px;
+  padding: 60px 40px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%2395CF62' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  -webkit-box-shadow: 0px 15px 40px rgba(8, 109, 182, 0.1);
+          box-shadow: 0px 15px 40px rgba(8, 109, 182, 0.1);
+}
+
+.methods-section .profitable-treatment-block > div:last-of-type > div {
+  -webkit-transform: skew(5deg);
+      -ms-transform: skew(5deg);
+          transform: skew(5deg);
+}
+
+.methods-section .profitable-treatment-block .treatment-grid {
+  display: grid;
+  row-gap: 30px;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.methods-section .profitable-treatment-block .treatment-grid .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.methods-section .profitable-treatment-block .treatment-grid .item__icon {
+  background-color: #95CF62;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='white' stroke-width='6' stroke-dasharray='4%25%2c 18%25' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.methods-section .profitable-treatment-block .treatment-grid .item__text {
   text-align: center;
   font-size: 20px;
   line-height: 26px;
@@ -1628,6 +1745,29 @@ footer {
 @media (max-width: 1600px) {
   .container {
     padding: 0 20px;
+  }
+}
+
+@media (max-width: 1599px) {
+  .methods-section .profitable-treatment-block .blue-background-block__text {
+    max-width: unset;
+    left: unset;
+  }
+
+  .methods-section .profitable-treatment-block .blue-background-block__text button {
+    margin: 0 auto;
+  }
+
+  .methods-section .profitable-treatment-block .blue-background-block {
+    left: 0;
+    max-width: unset;
+    padding: 60px 38px;
+    margin-bottom: 40px;
+  }
+
+  .methods-section .profitable-treatment-block > div:last-of-type {
+    position: static;
+    margin: 0 auto;
   }
 }
 
@@ -1964,6 +2104,61 @@ footer {
     padding-right: 20px;
   }
 
+  .methods-section .profitable-treatment-block .blue-background-block {
+    left: -20px;
+    width: calc(100% + 40px);
+    border: none;
+    border-top: 6px solid white;
+    border-radius: 0;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    margin-bottom: 0;
+    padding: 55px 20px;
+  }
+
+  .methods-section .profitable-treatment-block .blue-background-block .title {
+    margin-bottom: 25px;
+  }
+
+  .methods-section .profitable-treatment-block > div:last-of-type > div {
+    -webkit-transform: skewX(0deg);
+        -ms-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+
+  .methods-section .profitable-treatment-block > div:last-of-type {
+    padding: 0;
+    position: relative;
+    background-image: unset;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: unset;
+    border-radius: 0px;
+    left: -20px;
+    width: calc(100% + 40px);
+    -webkit-transform: skewX(0deg);
+        -ms-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+
+  .methods-section .profitable-treatment-block > div:last-of-type:before {
+    content: "";
+    display: block;
+    height: 4px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='0%' y1='50%' x2='100%' y2='50%' style='stroke:%2395CF62; stroke-width: 100; stroke-dasharray: 10 12'%3e%3c/line%3e%3c/svg%3e");
+  }
+
+  .methods-section .profitable-treatment-block > div:last-of-type:after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3cline x1='0%' y1='50%' x2='100%' y2='50%' style='stroke:%2395CF62; stroke-width: 100; stroke-dasharray: 10 12'%3e%3c/line%3e%3c/svg%3e");
+  }
+
+  .methods-section .profitable-treatment-block .treatment-grid {
+    padding: 50px 0 40px;
+  }
+
   .personal-program-text {
     margin-top: 37px;
     font-size: 18px;
@@ -2086,6 +2281,11 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .title.title-lp {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
   .header-lp__logo img {
     width: 90px;
   }
@@ -2127,10 +2327,24 @@ footer {
     padding-top: 75px;
   }
 
+  .methods-section .important-block .important-block-grid .item__text {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
   .methods-section .important-block .important-block-grid {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .methods-section .profitable-treatment-block .treatment-grid .item__text {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .methods-section .profitable-treatment-block .treatment-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .methods-section .remember-block {
@@ -2226,3 +2440,5 @@ footer {
 }
 
 .webp .result-section{ background: url("../img/textures/Rectangle 240.png"), #ECF7FE; }
+
+.webp .methods-section .profitable-treatment-block .blue-background-block{ background: url("../img/textures/Rectangle 240.png"), #ECF7FE; }

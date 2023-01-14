@@ -104,6 +104,19 @@ button {
     font-size: 28px;
     line-height: 36px;
   }
+
+  &.title-lp {
+    font-family: $ruda;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 57px;
+    max-width: 900px;
+    margin: 0 auto;
+    @media (max-width: 767px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
 }
 
 // Auxiliary classes
