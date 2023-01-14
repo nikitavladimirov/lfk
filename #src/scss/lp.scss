@@ -239,25 +239,200 @@
     }
   }
   .plan-block {
-    background-color: white;
-    border: 6px solid #F5F5F5;
-    border-radius: 30px;
-    box-shadow: 0px 20px 40px rgba(8, 109, 182, 0.1);
+    perspective: 1400px;
+    padding: 65px 50px 75px;
+    position: relative;
+
+    @media (max-width: 767px) {
+      padding: 55px 20px;
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: 1023px) {
+      width: calc(100% + 40px);
+      left: -20px;
+    }
+
+    &:before {
+      border: 6px solid #F5F5F5;
+      transform: rotateX(-5deg);
+      background-color: white;
+      transform-origin: 100%;
+      border-radius: 30px;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      content: '';
+      overflow: hidden;
+      box-shadow: 0px 20px 40px rgba(8, 109, 182, 0.1);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      
+      @media (max-width: 1023px) {
+        border-radius: 0px;
+        border-left: unset;
+        border-right: unset;
+      }
+
+      @media (max-width: 1600px) {
+        transform: rotateX(0deg);
+      }
+    }
+
+    & > div {
+      perspective: none;
+    }
+
+    .button {
+      position: relative;
+      margin-top: 65px;
+      display: flex;
+      justify-content: center;
+      z-index: 2;
+    }
 
     .title-lp {
       margin-bottom: 55px;
+      position: relative;
+      z-index: 2;
+
+      @media (max-width: 767px) {
+        margin-bottom: 30px;
+      }
     }
 
     .plan-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 20px;
-      row-gap: 80px;
+      align-items: flex-start;
+      column-gap: 120px;
+      row-gap: 120px;
+      z-index: 10;
+
+      @media (max-width: 1600px) {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+      }
+
       .item {
+        max-width: 400px;
+        margin: 0 auto;
         font-size: 20px;
         line-height: 28px;
         font-weight: 400;
         text-align: center;
+        position: relative;
+
+        &_1, &_2, &_5 {
+          max-width: 385px;
+          @media (max-width: 1600px) {
+            width: 100%;
+            max-width: 800px;
+          }
+        }
+
+        &_3 {
+          max-width: 350px;
+          @media (max-width: 1600px) {
+            width: 100%;
+            max-width: 800px;
+          }
+        }
+        &_4 {
+          max-width: 330px;
+          position: relative;
+          left: 40px;
+          @media (max-width: 1600px) {
+            width: 100%;
+            max-width: 800px;
+            left: unset;
+          }
+        }
+
+        &_6 {
+          max-width: 338px;
+          position: relative;
+          left: -35px;
+          @media (max-width: 1600px) {
+            left: unset;
+            width: 100%;
+            max-width: 800px;
+          }
+        }
+
+        &_1:before {
+          content: '';
+          display: block;
+          width: 58px;
+          height: 61px;
+          left: -60px;
+          top: 0;
+          position: absolute;
+          background: url('../img/lines/curved-short-line1.svg') no-repeat;
+
+          @media (max-width: 1600px) {
+            display: none;
+          }
+        }
+
+        &_6:after {
+          content: '';
+          display: block;
+          width: 101px;
+          height: 19px;
+          right: -100px;
+          top: calc(50% - 7px);
+          position: absolute;
+          background: url('../img/lines/curved-short-line2.svg') no-repeat;
+
+          @media (max-width: 1600px) {
+            display: none;
+          }
+        }
+
+        &_1:after, &_2:after, &_4:after, &_5:after {
+          content: '';
+          display: block;
+          width: 95px;
+          height: 15px;
+          right: -107px;
+          top: calc(50% - 7px);
+          position: absolute;
+          background: url('../img/lines/line-short.svg') no-repeat;
+
+          @media (max-width: 1600px) {
+            width: 12px;
+            top: 100%;
+            left: 50%;
+            height: 47px;
+            background: url('../img/lines/line-short-mobile.svg') no-repeat;
+          }
+        }
+        
+        &_3:after {
+          @media (max-width: 1600px) {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 12px;
+            top: 100%;
+            left: 50%;
+            height: 47px;
+            background: url('../img/lines/line-short-mobile.svg') no-repeat;
+          }
+        }
+      }
+    }
+
+    .curved-line {
+      position: absolute;
+      top: calc(50% - 150px);
+      z-index: 1;
+      pointer-events: none;
+
+      @media (max-width: 1600px) {
+        display: none;
       }
     }
   }

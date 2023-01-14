@@ -238,6 +238,7 @@ button.btn-lp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-weight: 800;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1194,31 +1195,143 @@ button.h-50 {
 }
 
 .steps-section .plan-block {
-  background-color: white;
+  -webkit-perspective: 1400px;
+          perspective: 1400px;
+  padding: 65px 50px 75px;
+  position: relative;
+}
+
+.steps-section .plan-block:before {
   border: 6px solid #F5F5F5;
+  -webkit-transform: rotateX(-5deg);
+          transform: rotateX(-5deg);
+  background-color: white;
+  -webkit-transform-origin: 100%;
+      -ms-transform-origin: 100%;
+          transform-origin: 100%;
   border-radius: 30px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  content: "";
+  overflow: hidden;
   -webkit-box-shadow: 0px 20px 40px rgba(8, 109, 182, 0.1);
           box-shadow: 0px 20px 40px rgba(8, 109, 182, 0.1);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.steps-section .plan-block > div {
+  -webkit-perspective: none;
+          perspective: none;
+}
+
+.steps-section .plan-block .button {
+  position: relative;
+  margin-top: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
 }
 
 .steps-section .plan-block .title-lp {
   margin-bottom: 55px;
+  position: relative;
+  z-index: 2;
 }
 
 .steps-section .plan-block .plan-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
-  row-gap: 80px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 120px;
+     -moz-column-gap: 120px;
+          column-gap: 120px;
+  row-gap: 120px;
+  z-index: 10;
 }
 
 .steps-section .plan-block .plan-grid .item {
+  max-width: 400px;
+  margin: 0 auto;
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;
   text-align: center;
+  position: relative;
+}
+
+.steps-section .plan-block .plan-grid .item_1,
+.steps-section .plan-block .plan-grid .item_2,
+.steps-section .plan-block .plan-grid .item_5 {
+  max-width: 385px;
+}
+
+.steps-section .plan-block .plan-grid .item_3 {
+  max-width: 350px;
+}
+
+.steps-section .plan-block .plan-grid .item_4 {
+  max-width: 330px;
+  position: relative;
+  left: 40px;
+}
+
+.steps-section .plan-block .plan-grid .item_6 {
+  max-width: 338px;
+  position: relative;
+  left: -35px;
+}
+
+.steps-section .plan-block .plan-grid .item_1:before {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 61px;
+  left: -60px;
+  top: 0;
+  position: absolute;
+  background: url("../img/lines/curved-short-line1.svg") no-repeat;
+}
+
+.steps-section .plan-block .plan-grid .item_6:after {
+  content: "";
+  display: block;
+  width: 101px;
+  height: 19px;
+  right: -100px;
+  top: calc(50% - 7px);
+  position: absolute;
+  background: url("../img/lines/curved-short-line2.svg") no-repeat;
+}
+
+.steps-section .plan-block .plan-grid .item_1:after,
+.steps-section .plan-block .plan-grid .item_2:after,
+.steps-section .plan-block .plan-grid .item_4:after,
+.steps-section .plan-block .plan-grid .item_5:after {
+  content: "";
+  display: block;
+  width: 95px;
+  height: 15px;
+  right: -107px;
+  top: calc(50% - 7px);
+  position: absolute;
+  background: url("../img/lines/line-short.svg") no-repeat;
+}
+
+.steps-section .plan-block .curved-line {
+  position: absolute;
+  top: calc(50% - 150px);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .result-section {
@@ -1792,6 +1905,74 @@ footer {
   .container {
     padding: 0 20px;
   }
+
+  .steps-section .plan-block:before {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+
+  .steps-section .plan-block .plan-grid {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+
+  .steps-section .plan-block .plan-grid .item_1,
+  .steps-section .plan-block .plan-grid .item_2,
+  .steps-section .plan-block .plan-grid .item_5 {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .steps-section .plan-block .plan-grid .item_3 {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .steps-section .plan-block .plan-grid .item_4 {
+    width: 100%;
+    max-width: 800px;
+    left: unset;
+  }
+
+  .steps-section .plan-block .plan-grid .item_6 {
+    left: unset;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .steps-section .plan-block .plan-grid .item_1:before {
+    display: none;
+  }
+
+  .steps-section .plan-block .plan-grid .item_6:after {
+    display: none;
+  }
+
+  .steps-section .plan-block .plan-grid .item_1:after,
+  .steps-section .plan-block .plan-grid .item_2:after,
+  .steps-section .plan-block .plan-grid .item_4:after,
+  .steps-section .plan-block .plan-grid .item_5:after {
+    width: 12px;
+    top: 100%;
+    left: 50%;
+    height: 47px;
+    background: url("../img/lines/line-short-mobile.svg") no-repeat;
+  }
+
+  .steps-section .plan-block .plan-grid .item_3:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 12px;
+    top: 100%;
+    left: 50%;
+    height: 47px;
+    background: url("../img/lines/line-short-mobile.svg") no-repeat;
+  }
+
+  .steps-section .plan-block .curved-line {
+    display: none;
+  }
 }
 
 @media (max-width: 1599px) {
@@ -2079,6 +2260,17 @@ footer {
 
   .steps-section .steps-grid .item {
     width: 50%;
+  }
+
+  .steps-section .plan-block {
+    width: calc(100% + 40px);
+    left: -20px;
+  }
+
+  .steps-section .plan-block:before {
+    border-radius: 0px;
+    border-left: unset;
+    border-right: unset;
   }
 
   .methods-section .methods-grid__item .circle {
@@ -2381,6 +2573,15 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .steps-section .plan-block {
+    padding: 55px 20px;
+    margin-bottom: 80px;
+  }
+
+  .steps-section .plan-block .title-lp {
+    margin-bottom: 30px;
   }
 
   .result-section {
