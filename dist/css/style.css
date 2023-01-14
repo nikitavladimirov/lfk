@@ -973,7 +973,7 @@ button.h-50 {
 }
 
 .top-header-section {
-  background: #ECF7FE;
+  background: url("../img/lines/curved-big-line2.svg") no-repeat #ECF7FE;
 }
 
 .top-header-section .top-block {
@@ -983,14 +983,27 @@ button.h-50 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-top: 67px;
-  padding-bottom: 115px;
+  padding-bottom: 116px;
 }
 
 .top-header-section .top-block > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-header-section .top-block > div:first-of-type > div {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.333%;
           flex: 0 1 33.333%;
@@ -1026,9 +1039,9 @@ button.h-50 {
   border-radius: 30px;
   z-index: 200;
   position: relative;
-  -webkit-transform: skew(-5deg);
-      -ms-transform: skew(-5deg);
-          transform: skew(-5deg);
+  -webkit-transform: skew(-3deg);
+      -ms-transform: skew(-3deg);
+          transform: skew(-3deg);
 }
 
 .top-header-section .top-block__image .border {
@@ -1041,9 +1054,9 @@ button.h-50 {
 
 .top-header-section .top-block__image img {
   position: absolute;
-  -webkit-transform: skew(5deg) scale(1.07);
-      -ms-transform: skew(5deg) scale(1.07);
-          transform: skew(5deg) scale(1.07);
+  -webkit-transform: skew(3deg) scale(1.07);
+      -ms-transform: skew(3deg) scale(1.07);
+          transform: skew(3deg) scale(1.07);
   width: 100%;
   height: 100%;
   top: 0;
@@ -1064,23 +1077,28 @@ button.h-50 {
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%2395CF62' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
   border-radius: 30px;
   background-color: white;
-  -webkit-transform: skew(-5deg);
-      -ms-transform: skew(-5deg);
-          transform: skew(-5deg);
+  -webkit-transform: skew(-3deg);
+      -ms-transform: skew(-3deg);
+          transform: skew(-3deg);
   margin-right: 100px;
   padding: 40px;
 }
 
 .top-header-section .top-block .section-2 > div {
-  -webkit-transform: skew(5deg);
-      -ms-transform: skew(5deg);
-          transform: skew(5deg);
+  -webkit-transform: skew(3deg);
+      -ms-transform: skew(3deg);
+          transform: skew(3deg);
 }
 
 .top-header-section .top-block .section-3 .top-block__image {
   margin-bottom: 43px;
   width: 340px;
   height: 335px;
+}
+
+.steps-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .steps-section .image-text-block {
@@ -1137,6 +1155,7 @@ button.h-50 {
 }
 
 .steps-section .steps-grid {
+  margin-top: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1195,6 +1214,7 @@ button.h-50 {
 }
 
 .steps-section .plan-block {
+  margin-top: 100px;
   -webkit-perspective: 1400px;
           perspective: 1400px;
   padding: 65px 50px 75px;
@@ -1377,6 +1397,7 @@ button.h-50 {
 }
 
 .methods-section .methods-grid {
+  margin-top: 72px;
   padding-top: 50px;
   width: 100%;
   display: grid;
@@ -1446,6 +1467,7 @@ button.h-50 {
 }
 
 .methods-section .important-block {
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1568,6 +1590,7 @@ button.h-50 {
 }
 
 .methods-section .profitable-treatment-block {
+  margin-top: 95px;
   position: relative;
 }
 
@@ -1672,6 +1695,7 @@ button.h-50 {
 }
 
 .methods-section .remember-block {
+  margin: 0 auto;
   margin-top: 100px;
   max-width: 1020px;
   display: -webkit-box;
@@ -1683,7 +1707,6 @@ button.h-50 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
 }
 
 .methods-section .remember-block .photo img {
@@ -1755,6 +1778,15 @@ button.h-50 {
   font-weight: 700;
   font-size: 28px;
   line-height: 36px;
+}
+
+.methods-section .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .personal-program-text {
@@ -2005,16 +2037,41 @@ footer {
 }
 
 @media (max-width: 1365px) {
+  .top-header-section {
+    background: #ECF7FE;
+  }
+
   .top-header-section .top-block {
+    padding-top: 28px;
+    padding-bottom: 84px;
+  }
+
+  .top-header-section .top-block > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
 
+  .top-header-section .top-block > div:first-of-type {
+    margin-bottom: 65px;
+  }
+
+  .top-header-section .top-block > div:first-of-type > div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin-right: 0px;
+  }
+
+  .top-header-section .top-block .section-1 {
+    margin-bottom: 50px;
+  }
+
   .top-header-section .top-block .section-2 {
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 50px;
   }
 
   .top-header-section .top-block .section-3 .top-block__image {
@@ -2561,6 +2618,32 @@ footer {
     line-height: 23px;
   }
 
+  .top-header-section .top-block__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .top-header-section .top-block__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .top-header-section .top-block .section-1 .top-block__image {
+    width: 323px;
+    height: 324px;
+  }
+
+  .top-header-section .top-block .section-2 {
+    width: 100%;
+    max-width: 324px;
+    padding: 20px 30px;
+  }
+
+  .top-header-section .top-block .section-3 .top-block__image {
+    width: 310px;
+    height: 335px;
+  }
+
   .steps-section .steps-grid .item {
     width: 100%;
   }
@@ -2590,6 +2673,11 @@ footer {
 
   .methods-section {
     padding-top: 75px;
+  }
+
+  .methods-section .important-block p {
+    font-size: 22px;
+    line-height: 31px;
   }
 
   .methods-section .important-block .important-block-grid .item__text {
