@@ -56,10 +56,13 @@
 
 .header-lp {
   padding-top: 32px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  row-gap: 20px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
   &__logo {
     @media (max-width: 767px) {
       img {
@@ -102,34 +105,61 @@
         line-height: 19px;
       }
     }
+
+    @media (max-width: 1023px) {
+      order: 3;
+    }
   }
 
   &__telephone {
     display: flex;
-    align-items: center;
-    margin-right: 60px;
+    justify-content: flex-end;
+    margin-right: 40px;
+    
+    a {
+      display: flex;
+      align-items: center;
 
-    img {
-      margin-right: 12px;
-    }
-
-    & > div {
-      font-weight: 900;
-      font-family: $ruda;
-      color: #086DB6;
-
-      @media (max-width: 767px) {
-        font-size: 18px;
-        line-height: 23px;
+      img {
+        margin-right: 12px;
       }
+
+      & > div {
+        font-weight: 900;
+        font-family: $ruda;
+        color: #086DB6;
+
+        @media (max-width: 767px) {
+          font-size: 18px;
+          line-height: 23px;
+        }
+      }
+
+      @media (max-width: 1023px) {
+        order: 2;
+      } 
     }
 
-    @media (max-width: 1100px) {
-      margin-right: 40px;
+    @media (max-width: 1023px) {
+      order: 3;
+      margin-right: 0px;
+      align-self: start;
     }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
     @media (max-width: 1023px) {
       order: 2;
-      margin-right: 0px;
     }
+  }
+
+  @media (max-width: 460px) {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

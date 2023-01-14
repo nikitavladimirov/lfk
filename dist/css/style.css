@@ -348,9 +348,9 @@ button.h-50 {
 
 .header-lp {
   padding-top: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  row-gap: 20px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -401,20 +401,38 @@ button.h-50 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 40px;
+}
+
+.header-lp__telephone a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 60px;
 }
 
-.header-lp__telephone img {
+.header-lp__telephone a img {
   margin-right: 12px;
 }
 
-.header-lp__telephone > div {
+.header-lp__telephone a > div {
   font-weight: 900;
   font-family: "Ruda";
   color: #086DB6;
+}
+
+.header-lp__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .main-block {
@@ -1175,6 +1193,34 @@ button.h-50 {
   text-align: center;
 }
 
+.steps-section .plan-block {
+  background-color: white;
+  border: 6px solid #F5F5F5;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 20px 40px rgba(8, 109, 182, 0.1);
+          box-shadow: 0px 20px 40px rgba(8, 109, 182, 0.1);
+}
+
+.steps-section .plan-block .title-lp {
+  margin-bottom: 55px;
+}
+
+.steps-section .plan-block .plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 80px;
+}
+
+.steps-section .plan-block .plan-grid .item {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
 .result-section {
   padding: 90px 0 80px;
   background: url("../img/textures/Rectangle 240.png"), #ECF7FE;
@@ -1804,12 +1850,6 @@ footer {
   }
 }
 
-@media (max-width: 1100px) {
-  .header-lp__telephone {
-    margin-right: 40px;
-  }
-}
-
 @media (max-width: 1024px) {
   .header-wrapper__section_1 {
     -webkit-box-flex: 0;
@@ -1951,11 +1991,35 @@ footer {
 }
 
 @media (max-width: 1023px) {
-  .header-lp__telephone {
+  .header-lp__location {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .header-lp__telephone a {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+  }
+
+  .header-lp__telephone {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
     margin-right: 0px;
+    -ms-flex-item-align: start;
+        align-self: start;
+  }
+
+  .header-lp__button {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .header-lp {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .steps-section .image-text-block {
@@ -2300,7 +2364,7 @@ footer {
     line-height: 19px;
   }
 
-  .header-lp__telephone > div {
+  .header-lp__telephone a > div {
     font-size: 18px;
     line-height: 23px;
   }
@@ -2436,6 +2500,12 @@ footer {
 
   .footer-lp__contacts {
     padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  .header-lp {
+    grid-template-columns: 1fr 2fr;
   }
 }
 
