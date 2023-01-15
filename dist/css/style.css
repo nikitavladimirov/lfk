@@ -227,10 +227,23 @@ button.green {
           box-shadow: 0px 10px 25px rgba(133, 207, 98, 0.3);
 }
 
+button.green.btn-lp,
+button.green.btn-lp-small {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0))), #75B72A;
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #75B72A;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #75B72A;
+}
+
 button.blue {
   background-color: #2F97EB;
   -webkit-box-shadow: 0px 20px 20px rgba(69, 139, 245, 0.3);
           box-shadow: 0px 20px 20px rgba(69, 139, 245, 0.3);
+}
+
+button.blue.btn-lp,
+button.blue.btn-lp-small {
+  background: -o-linear-gradient(359.8deg, rgba(255, 255, 255, 0.2) 0.18%, rgba(255, 255, 255, 0) 99.84%), #45A7F5;
+  background: linear-gradient(90.2deg, rgba(255, 255, 255, 0.2) 0.18%, rgba(255, 255, 255, 0) 99.84%), #45A7F5;
 }
 
 button.btn-lp {
@@ -238,10 +251,36 @@ button.btn-lp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-weight: 800;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 400px;
+  padding: 30px 40px;
+  border-radius: 20px;
+}
+
+button.btn-lp-small {
+  font-family: "Ruda";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 50px;
+  padding: 11px 20px;
+  border-radius: 10px;
 }
 
 button.h-50 {
@@ -1083,7 +1122,7 @@ button.h-50 {
 }
 
 .top-header-section .top-block__title span {
-  color: #95CF62;
+  color: #75B72A;
 }
 
 .top-header-section .top-block__image {
@@ -1159,6 +1198,10 @@ button.h-50 {
   overflow: hidden;
   padding-top: 90px;
   padding-bottom: 90px;
+}
+
+.steps-section .title-lp span {
+  color: #75B72A;
 }
 
 .steps-section .round-texture_1 {
@@ -1448,6 +1491,10 @@ button.h-50 {
   background: url("../img/textures/Rectangle 240.png"), #ECF7FE;
 }
 
+.result-section .title-lp span {
+  color: #75B72A;
+}
+
 .result-section img {
   max-width: 100%;
   height: auto;
@@ -1467,7 +1514,7 @@ button.h-50 {
 .result-section .text span {
   font-weight: 700;
   text-transform: uppercase;
-  color: #95CF62;
+  color: #75B72A;
   font-family: "NunitoSansItalic";
 }
 
@@ -1486,6 +1533,10 @@ button.h-50 {
   position: relative;
   overflow: hidden;
   padding-bottom: 200px;
+}
+
+.methods-section .title-lp span {
+  color: #75B72A;
 }
 
 .methods-section .round-texture_1 {
@@ -1659,7 +1710,7 @@ button.h-50 {
   position: absolute;
   font-size: 28px;
   line-height: 39px;
-  background-color: #95CF62;
+  background-color: #75B72A;
   color: white;
   font-weight: 700;
   border-radius: 56px;
@@ -2189,6 +2240,16 @@ footer {
 }
 
 @media (max-width: 1365px) {
+  button.btn-lp {
+    width: 340px;
+  }
+
+  button.btn-lp-small {
+    height: 40px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
   .top-header-section {
     background: #ECF7FE;
   }

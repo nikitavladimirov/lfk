@@ -118,7 +118,7 @@
       font-size: 30px;
       line-height: 39px;
       color: $blue;
-      span { color: $green; }
+      span { color: $greenLP; }
 
       @media (max-width: 767px) {
         font-size: 28px;
@@ -218,6 +218,10 @@
   overflow: hidden;
   padding-top: 90px;
   padding-bottom: 90px;
+
+  .title-lp {
+    span { color: $greenLP; }
+  }
 
   .round-texture {
     &_1 {
@@ -589,6 +593,10 @@
 }
 
 .result-section {
+  .title-lp {
+    span { color: $greenLP }
+  }
+
   padding: 90px 0 80px;
   background: url('../img/textures/Rectangle\ 240.png'), #ECF7FE;
 
@@ -613,7 +621,7 @@
     span {
       font-weight: 700;
       text-transform: uppercase;
-      color: $green;
+      color: $greenLP;
       font-family: $nunitoSansItalic;
     }
   }
@@ -627,6 +635,10 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 200px;
+
+  .title-lp {
+    span { color: $greenLP }
+  }
 
   .round-texture {
     &_1 {
@@ -831,7 +843,7 @@
         position: absolute;
         font-size: 28px;
         line-height: 39px;
-        background-color: $green;
+        background-color: $greenLP;
         color: white;
         font-weight: 700;
         border-radius: 56px;
@@ -1218,6 +1230,7 @@
       line-height: 36px;
     }
   }
+
   .button {
     display: flex;
     justify-content: center;

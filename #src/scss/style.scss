@@ -26,8 +26,10 @@ $ruda: 'Ruda';
 
 $darkText: #444444;
 $blue: #2F97EB;
+$blueLP: #45A7F5;
 $blueShadow: 0px 20px 20px rgba(69, 139, 245, 0.3);
 $green: #95CF62;
+$greenLP: #75B72A;
 $greenShadow: 0px 10px 25px rgba(133, 207, 98, 0.3);
 
 body {
@@ -67,17 +69,52 @@ button {
   &.green {
     background-color: $green;
     box-shadow: $greenShadow;
+    &.btn-lp, &.btn-lp-small {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), #75B72A;
+    }
   }
   &.blue {
     background-color: $blue;
     box-shadow: $blueShadow;
+    &.btn-lp, &.btn-lp-small {
+      background: linear-gradient(90.2deg, rgba(255, 255, 255, 0.2) 0.18%, rgba(255, 255, 255, 0) 99.84%), #45A7F5;
+    }
   }
   &.btn-lp {
     font-family: $ruda;
     display: flex;
+    justify-content: center;
     font-weight: 800;
     align-items: center;
+    width: 400px;
+    padding: 30px 40px;
+    border-radius: 20px;
+
+    @media (max-width: 1365px) {
+      width: 340px;
+    }
   }
+
+  &.btn-lp-small {
+    font-family: $ruda;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 30px;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    padding: 11px 20px;
+    border-radius: 10px;
+
+    @media (max-width: 1365px) {
+      height: 40px;
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
   &.h-50 {
     max-height: 50px;
   }
