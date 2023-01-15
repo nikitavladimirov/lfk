@@ -358,6 +358,16 @@
           width: 90px;
           height: 90px;
         }
+
+        @media (max-width: 767px) {
+          width: 160px;
+          height: 160px;
+
+          img {
+            width: 72px;
+            height: 72px;
+          }
+        }
       }
   
       &__title {
@@ -389,6 +399,8 @@
     @media (max-width: 767px) {
       flex-direction: column;
       align-items: center;
+      margin-top: 35px;
+      margin-bottom: 15px;
     }
   }
   .plan-block {
@@ -399,7 +411,7 @@
 
     @media (max-width: 767px) {
       padding: 55px 20px;
-      margin-bottom: 80px;
+      margin-bottom: unset;
     }
 
     @media (max-width: 1023px) {
@@ -624,6 +636,9 @@
       color: $greenLP;
       font-family: $nunitoSansItalic;
     }
+    @media (max-width: 767px) {
+      margin-bottom: 35px;
+    }
   }
 }
 
@@ -786,7 +801,12 @@
         height: 107px;
       }
     }
-  
+
+    @media (max-width: 767px) {
+      margin-top: 45px;
+      padding-top: 32px;
+    }
+
     @media (max-width: 1919px) {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -805,11 +825,15 @@
     margin-top: 100px;
     display: flex;
     width: 100%;
-  
+    
+    @media (max-width: 767px) {
+      margin-top: 72px;
+    }
+
     @media (max-width: 1023px) {
       flex-direction: column;
     }
-  
+
     & > div {
       flex: 0 1 50%;
       @media (max-width: 1023px) {
@@ -823,6 +847,9 @@
       
       .title {
         margin-bottom: 60px;
+        @media (max-width: 767px) {
+          margin-bottom: 20px;
+        }
       }
 
       @media (max-width: 1023px) {
@@ -863,6 +890,10 @@
       max-width: 720px;
       &:first-of-type {
         margin-bottom: 60px;
+
+        @media (max-width: 767px) {
+          margin-bottom: 20px;
+        }
       }
 
       @media (max-width: 767px) {
@@ -885,10 +916,14 @@
         transform: skew(2deg);
         @media (max-width: 1023px) {
           transform: skewX(0deg);
-          padding: 70px 0px;
+          padding: 70px 0px 30px;
         }
       }
   
+      @media (max-width: 767px) {
+        padding-bottom: 0px;
+      }
+
       @media (max-width: 1023px) {
         background-image: unset;
         padding-left: 0;
@@ -923,7 +958,7 @@
         align-items: center;
     
         &__icon {
-          background-color: $blue;
+          background-color: $blueLP;
           width: 100px;
           height: 100px;
           border-radius: 50%;
@@ -962,6 +997,10 @@
     margin-top: 95px;
     position: relative;
 
+    @media (max-width: 767px) {
+      margin-top: 80px;
+    }
+
     .blue-background-block {
       background: url('../img/textures/Rectangle\ 240.png'), #ECF7FE;
       padding: 70px 38px 125px;
@@ -983,8 +1022,16 @@
         p {
           font-size: 20px;
           line-height: 28px;
+
+          @media (max-width: 767px) {
+            font-size: 18px;
+            line-height: 25px;
+          }
           &:first-of-type {
             margin-bottom: 25px;
+            @media (max-width: 767px) {
+              margin-bottom: 10px;
+            }
           }
           &:last-of-type {
             margin-bottom: 40px;
@@ -1163,6 +1210,7 @@
       @media (max-width: 767px) {
         font-size: 28px;
         line-height: 36px;
+        margin-bottom: 10px;
       }
     }
 

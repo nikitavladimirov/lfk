@@ -255,6 +255,8 @@ button.btn-lp {
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1770,7 +1772,7 @@ button.h-50 {
 }
 
 .methods-section .important-block .important-block-grid .item__icon {
-  background-color: #2F97EB;
+  background-color: #45A7F5;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -2608,7 +2610,7 @@ footer {
     -webkit-transform: skewX(0deg);
         -ms-transform: skewX(0deg);
             transform: skewX(0deg);
-    padding: 70px 0px;
+    padding: 70px 0px 30px;
   }
 
   .methods-section .important-block .white-dashed-block {
@@ -2874,6 +2876,16 @@ footer {
     height: 335px;
   }
 
+  .steps-section .steps-grid .item__image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .steps-section .steps-grid .item__image img {
+    width: 72px;
+    height: 72px;
+  }
+
   .steps-section .steps-grid .item {
     width: 100%;
   }
@@ -2886,11 +2898,13 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 35px;
+    margin-bottom: 15px;
   }
 
   .steps-section .plan-block {
     padding: 55px 20px;
-    margin-bottom: 80px;
+    margin-bottom: unset;
   }
 
   .steps-section .plan-block .title-lp {
@@ -2901,14 +2915,39 @@ footer {
     padding: 55px 0 60px;
   }
 
+  .result-section .text {
+    margin-bottom: 35px;
+  }
+
   .methods-section {
     padding-top: 75px;
     padding-bottom: 70px;
   }
 
+  .methods-section .methods-grid {
+    margin-top: 45px;
+    padding-top: 32px;
+  }
+
+  .methods-section .important-block {
+    margin-top: 72px;
+  }
+
+  .methods-section .important-block > div:first-of-type .title {
+    margin-bottom: 20px;
+  }
+
+  .methods-section .important-block p:first-of-type {
+    margin-bottom: 20px;
+  }
+
   .methods-section .important-block p {
     font-size: 22px;
     line-height: 31px;
+  }
+
+  .methods-section .important-block .white-dashed-block {
+    padding-bottom: 0px;
   }
 
   .methods-section .important-block .important-block-grid .item__text {
@@ -2920,6 +2959,19 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .methods-section .profitable-treatment-block {
+    margin-top: 80px;
+  }
+
+  .methods-section .profitable-treatment-block .blue-background-block__text p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .methods-section .profitable-treatment-block .blue-background-block__text p:first-of-type {
+    margin-bottom: 10px;
   }
 
   .methods-section .profitable-treatment-block .treatment-grid .item__text {
@@ -2946,6 +2998,7 @@ footer {
   .methods-section .remember-block .text-big-red {
     font-size: 28px;
     line-height: 36px;
+    margin-bottom: 10px;
   }
 
   .methods-section .remember-block .text-main {
