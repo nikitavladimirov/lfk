@@ -1,5 +1,57 @@
+.blurred-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;  
+  z-index: -1;
+
+  @media (max-width: 1023px){
+    display: none;
+  }
+
+  &.green {
+    background-color: #75B72A;
+    filter: blur(62.5px);
+  }
+  &.blue {
+    background-color: #086DB6;
+    filter: blur(99px);
+    opacity: 0.3;
+  }
+}
+
+.round-texture {
+  position: absolute;
+  z-index: -1;
+
+  @media (max-width: 1023px){
+    display: none;
+  }
+}
+
 .top-header-section {
   background: url('../img/lines/curved-big-line2.svg') no-repeat #ECF7FE;
+  position: relative;
+  overflow: hidden;
+  
+  .blurred-circle {
+    z-index: 0;
+    &_1 {
+      width: 103px;
+      height: 103px;
+      left: 631px;
+      top: 276px;
+      opacity: 0.5;
+      filter: blur(46px);
+    }
+    &_2 {
+      width: 51px;
+      height: 51px;
+      right: 228px;
+      top: 500px;
+      filter: blur(25.5px);
+    }
+  }
 
   @media (max-width: 1365px) {
     background: #ECF7FE;
@@ -105,6 +157,7 @@
         margin-right: auto;
         width: 380px;
         height: 360px;
+        box-shadow: 0px 25px 40px rgba(8, 109, 182, 0.1);
 
         @media (max-width: 767px) {
           width: 323px;
@@ -123,6 +176,7 @@
       transform: skew(-3deg);
       margin-right: 100px;
       padding: 40px;
+      box-shadow: 0px 15px 40px rgba(8, 109, 182, 0.1);
 
       & > div { transform: skew(3deg); }
 
@@ -130,6 +184,7 @@
         width: 100%;
         max-width: 324px;
         padding: 20px 30px;
+        margin-left: unset;
       }
 
       @media (max-width: 1365px) {
@@ -148,6 +203,7 @@
         margin-bottom: 43px;
         width: 340px;
         height: 335px;
+        box-shadow: 0px 25px 40px rgba(8, 109, 182, 0.1);
         @media (max-width: 767px) {
           width: 310px;
           height: 335px;
@@ -158,8 +214,38 @@
 }
 
 .steps-section {
+  position: relative;
+  overflow: hidden;
   padding-top: 90px;
   padding-bottom: 90px;
+
+  .round-texture {
+    &_1 {
+      top: 204px;
+      left: -90px;
+    }
+
+    &_2 {
+      top: 540px;
+      right: -90px;
+      opacity: 0.4;
+    } 
+  }
+
+  .blurred-circle {
+    &_1 {
+      width: 130px;
+      height: 130px;
+      left: -29px;
+      top: 1078px;
+    }
+    &_2 {
+      width: 260px;
+      height: 260px;
+      right: 0;
+      bottom: 272px;
+    }
+  }
 
   .image-text-block {
     display: flex;
@@ -189,6 +275,7 @@
     padding: 40px;
     border-radius: 30px;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%2395CF62' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    box-shadow: 0px 15px 40px rgba(8, 109, 182, 0.1);
   
     & > div {
       transform: skewX(5deg);
@@ -250,6 +337,7 @@
       width: 25%;
       padding: 0 50px;
       margin-bottom: 35px;
+
       &__image {
         width: 200px;
         height: 200px;
@@ -261,7 +349,7 @@
         align-items: center;
         justify-content: center;
         background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23FFFFFF' stroke-width='7' stroke-dasharray='12%25%2c 9%25' stroke-dashoffset='75' stroke-linecap='round'/%3e%3c/svg%3e");
-  
+        box-shadow: 0px 20px 40px rgba(149, 207, 98, 0.2);
         img {
           width: 90px;
           height: 90px;
@@ -536,9 +624,73 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 200px;
+
+  .round-texture {
+    &_1 {
+      top: 500px;
+      right: -450px;
+    }
+
+    &_2 {
+      top: 844px;
+      left: 0;
+    }
+
+    &_3 {
+      bottom: -90px;
+      right: -100px;
+    }
+
+    &_4 {
+      bottom: -576px;
+      left: -298px;
+    }
+  }
+
+  .blurred-circle {
+    &_1 {
+      width: 130px;
+      height: 130px;
+      right: 0;
+      top: 288px;
+    }
+
+    &_2 {
+      width: 260px;
+      height: 260px;
+      left: 0;
+      top: 518px;
+    }
+
+    &_3 {
+      width: 236px;
+      height: 236px;
+      right: 0;
+      bottom: 1150px;
+    }
+
+    &_4 {
+      width: 188px;
+      height: 188px;
+      left: 0;
+      bottom: 950px;
+      filter: blur(93.5px);
+    }
+
+    &_5 {
+      width: 236px;
+      height: 236px;
+      left: 600px;
+      bottom: 125px;
+    }
+  }
 
   @media (max-width: 767px) {
     padding-top: 75px;
+    padding-bottom: 70px;
   }
 
   .methods-grid {
@@ -604,6 +756,14 @@
         @media (max-width: 1023px) {
           font-size: 16px;
           line-height: 19px;
+        }
+
+        &.text-20 {
+          font-size: 18px;
+
+          @media (max-width: 1023px) {
+            font-size: 12px;
+          }
         }
       }
   

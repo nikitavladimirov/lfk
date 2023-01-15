@@ -774,6 +774,7 @@ button.h-50 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 200px;
 }
 
 .accordion {
@@ -972,8 +973,59 @@ button.h-50 {
   line-height: 25px;
 }
 
+.blurred-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.blurred-circle.green {
+  background-color: #75B72A;
+  -webkit-filter: blur(62.5px);
+          filter: blur(62.5px);
+}
+
+.blurred-circle.blue {
+  background-color: #086DB6;
+  -webkit-filter: blur(99px);
+          filter: blur(99px);
+  opacity: 0.3;
+}
+
+.round-texture {
+  position: absolute;
+  z-index: -1;
+}
+
 .top-header-section {
   background: url("../img/lines/curved-big-line2.svg") no-repeat #ECF7FE;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-header-section .blurred-circle {
+  z-index: 0;
+}
+
+.top-header-section .blurred-circle_1 {
+  width: 103px;
+  height: 103px;
+  left: 631px;
+  top: 276px;
+  opacity: 0.5;
+  -webkit-filter: blur(46px);
+          filter: blur(46px);
+}
+
+.top-header-section .blurred-circle_2 {
+  width: 51px;
+  height: 51px;
+  right: 228px;
+  top: 500px;
+  -webkit-filter: blur(25.5px);
+          filter: blur(25.5px);
 }
 
 .top-header-section .top-block {
@@ -1071,6 +1123,8 @@ button.h-50 {
   margin-right: auto;
   width: 380px;
   height: 360px;
+  -webkit-box-shadow: 0px 25px 40px rgba(8, 109, 182, 0.1);
+          box-shadow: 0px 25px 40px rgba(8, 109, 182, 0.1);
 }
 
 .top-header-section .top-block .section-2 {
@@ -1082,6 +1136,8 @@ button.h-50 {
           transform: skew(-3deg);
   margin-right: 100px;
   padding: 40px;
+  -webkit-box-shadow: 0px 15px 40px rgba(8, 109, 182, 0.1);
+          box-shadow: 0px 15px 40px rgba(8, 109, 182, 0.1);
 }
 
 .top-header-section .top-block .section-2 > div {
@@ -1094,11 +1150,40 @@ button.h-50 {
   margin-bottom: 43px;
   width: 340px;
   height: 335px;
+  -webkit-box-shadow: 0px 25px 40px rgba(8, 109, 182, 0.1);
+          box-shadow: 0px 25px 40px rgba(8, 109, 182, 0.1);
 }
 
 .steps-section {
+  position: relative;
+  overflow: hidden;
   padding-top: 90px;
   padding-bottom: 90px;
+}
+
+.steps-section .round-texture_1 {
+  top: 204px;
+  left: -90px;
+}
+
+.steps-section .round-texture_2 {
+  top: 540px;
+  right: -90px;
+  opacity: 0.4;
+}
+
+.steps-section .blurred-circle_1 {
+  width: 130px;
+  height: 130px;
+  left: -29px;
+  top: 1078px;
+}
+
+.steps-section .blurred-circle_2 {
+  width: 260px;
+  height: 260px;
+  right: 0;
+  bottom: 272px;
 }
 
 .steps-section .image-text-block {
@@ -1135,6 +1220,8 @@ button.h-50 {
   padding: 40px;
   border-radius: 30px;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%2395CF62' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  -webkit-box-shadow: 0px 15px 40px rgba(8, 109, 182, 0.1);
+          box-shadow: 0px 15px 40px rgba(8, 109, 182, 0.1);
 }
 
 .steps-section .text-block > div {
@@ -1190,6 +1277,8 @@ button.h-50 {
       -ms-flex-pack: center;
           justify-content: center;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23FFFFFF' stroke-width='7' stroke-dasharray='12%25%2c 9%25' stroke-dashoffset='75' stroke-linecap='round'/%3e%3c/svg%3e");
+  -webkit-box-shadow: 0px 20px 40px rgba(149, 207, 98, 0.2);
+          box-shadow: 0px 20px 40px rgba(149, 207, 98, 0.2);
 }
 
 .steps-section .steps-grid .item__image img {
@@ -1394,6 +1483,66 @@ button.h-50 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 200px;
+}
+
+.methods-section .round-texture_1 {
+  top: 500px;
+  right: -450px;
+}
+
+.methods-section .round-texture_2 {
+  top: 844px;
+  left: 0;
+}
+
+.methods-section .round-texture_3 {
+  bottom: -90px;
+  right: -100px;
+}
+
+.methods-section .round-texture_4 {
+  bottom: -576px;
+  left: -298px;
+}
+
+.methods-section .blurred-circle_1 {
+  width: 130px;
+  height: 130px;
+  right: 0;
+  top: 288px;
+}
+
+.methods-section .blurred-circle_2 {
+  width: 260px;
+  height: 260px;
+  left: 0;
+  top: 518px;
+}
+
+.methods-section .blurred-circle_3 {
+  width: 236px;
+  height: 236px;
+  right: 0;
+  bottom: 1150px;
+}
+
+.methods-section .blurred-circle_4 {
+  width: 188px;
+  height: 188px;
+  left: 0;
+  bottom: 950px;
+  -webkit-filter: blur(93.5px);
+          filter: blur(93.5px);
+}
+
+.methods-section .blurred-circle_5 {
+  width: 236px;
+  height: 236px;
+  left: 600px;
+  bottom: 125px;
 }
 
 .methods-section .methods-grid {
@@ -1464,6 +1613,10 @@ button.h-50 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.methods-section .methods-grid__item .text.text-20 {
+  font-size: 18px;
 }
 
 .methods-section .important-block {
@@ -1799,7 +1952,6 @@ button.h-50 {
 }
 
 footer {
-  margin-top: 200px;
   background-color: #F3F3F3;
 }
 
@@ -2260,6 +2412,14 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .blurred-circle {
+    display: none;
+  }
+
+  .round-texture {
+    display: none;
+  }
+
   .steps-section .image-text-block {
     display: block;
   }
@@ -2342,6 +2502,10 @@ footer {
   .methods-section .methods-grid__item .text {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  .methods-section .methods-grid__item .text.text-20 {
+    font-size: 12px;
   }
 
   .methods-section .methods-grid__item {
@@ -2618,6 +2782,10 @@ footer {
     line-height: 23px;
   }
 
+  .faq {
+    padding-bottom: 70px;
+  }
+
   .top-header-section .top-block__text {
     font-size: 18px;
     line-height: 25px;
@@ -2637,6 +2805,7 @@ footer {
     width: 100%;
     max-width: 324px;
     padding: 20px 30px;
+    margin-left: unset;
   }
 
   .top-header-section .top-block .section-3 .top-block__image {
@@ -2673,6 +2842,7 @@ footer {
 
   .methods-section {
     padding-top: 75px;
+    padding-bottom: 70px;
   }
 
   .methods-section .important-block p {
@@ -2738,10 +2908,6 @@ footer {
 
   .methods-section .remember-block ul > li {
     margin-bottom: 15px;
-  }
-
-  footer {
-    margin-top: 70px;
   }
 
   .footer-lp__logo img {
